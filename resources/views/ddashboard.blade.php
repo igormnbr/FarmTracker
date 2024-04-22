@@ -4,11 +4,11 @@
 
 @section('content')
 
-<div class="col-md-10 offset-md-1 dashboard-title-container">
+<!-- <div class="col-md-10 offset-md-1 dashboard-title-container">
     <h2>Minhas propriedades</h2>
 </div>
-<div class="col-md-10 offset-md-1 dashboard-events-container">
-    @if(count($farms)>0)
+<div  class="col-md-10 offset-md-1 dashboard-events-container">
+    @if(count($farms)>0) 
     <table class="table">
         <thead>
             <tr>
@@ -31,10 +31,17 @@
             @endforeach
         </tbody>
     </table>
+    
+    
+    
     @else
     <p>Você não possui nenhuma propriedade cadastrada ainda.</p>
     @endif
-</div>
+</div> -->
 
-
+@foreach ($farms as $farm)
+<p>{{$farm->propriedade}}</p>
+@endforeach
+<div>{{$farms->links()}}</div>
+ 
 @endsection

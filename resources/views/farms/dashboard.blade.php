@@ -46,6 +46,8 @@
             @endforeach
         </tbody>
     </table>
+    {{ $farms->links() }}
+    
     @else
     <p>Você não possui nenhuma propriedade cadastrada ainda.</p>
     @endif

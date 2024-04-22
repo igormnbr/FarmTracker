@@ -217,6 +217,10 @@ header {
     margin-top: 30px;
 }
 
+.pagination {
+    justify-content: center;
+}
+
 .dashboard-farms-container tr {
     text-align: center;
 }

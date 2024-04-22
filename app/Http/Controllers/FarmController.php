@@ -42,11 +42,20 @@ class FarmController extends Controller
     {
         return view('farms.show');
     }
+    
+
+    // public function dashboard(){
+    //     $user = auth()->user();
+
+    //     $farms = $user->farms;
+
+    //     return view('farms.dashboard', ['farms'=>$farms]);
+    // }
 
     public function dashboard(){
         $user = auth()->user();
 
-        $farms = $user->farms;
+        $farms = Farm::where('user_id', $user->id)->paginate(2);
 
         return view('farms.dashboard', ['farms'=>$farms]);
     }
